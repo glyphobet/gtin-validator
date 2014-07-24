@@ -20,6 +20,11 @@ the method defined at http://www.gs1.org/barcodes/support/check_digit_calculator
 
 """
 
+import sys
+if sys.version_info >= (3,):
+    long = int
+    basestring = str
+
 
 def is_valid_GTIN(code):
     """ Validates any GTIN-8, GTIN-12, GTIN-13 or GTIN-14 code. """
